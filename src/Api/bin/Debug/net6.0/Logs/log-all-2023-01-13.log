@@ -1,0 +1,10 @@
+2023-01-13 11:25:02.0172||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-13 11:25:02.0423||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-13 11:25:02.0423||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-13 11:25:02.0423||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-13 11:25:02.0423||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2023-01-13 11:25:02.8942||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-13 11:25:03.0468||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-13 11:25:03.0509||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-13 11:25:03.0826||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 190.2181ms 
+2023-01-13 11:25:49.3887||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 

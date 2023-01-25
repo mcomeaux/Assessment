@@ -1,0 +1,189 @@
+2022-10-25 11:07:24.9382||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 11:07:24.9613||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 11:07:24.9613||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 11:07:24.9613||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 11:07:24.9613||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 11:07:25.9218||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 11:07:26.0519||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 11:07:26.0792||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 11:07:26.1278||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 202.1502ms 
+2022-10-25 11:09:23.3558||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/emailaddress/registrations application/json 40 
+2022-10-25 11:09:23.3852||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/emailaddress/registrations application/json 40 - 404 0 - 29.3886ms 
+2022-10-25 11:13:16.0643||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 11:13:16.0839||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 11:13:16.0839||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 11:13:16.0839||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 11:13:16.0839||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 11:13:16.8875||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 11:13:17.0283||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 11:13:17.0516||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 11:13:17.1044||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 208.8446ms 
+2022-10-25 11:13:28.8299||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/emailaddress/registrations application/json 40 
+2022-10-25 11:13:28.8506||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/emailaddress/registrations application/json 40 - 307 0 - 20.5875ms 
+2022-10-25 11:13:28.8698||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/emailaddress/registrations application/json 40 
+2022-10-25 11:13:28.8698||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/emailaddress/registrations application/json 40 - 404 0 - 2.1150ms 
+2022-10-25 12:02:04.6607||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 12:02:04.6934||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 12:02:04.6934||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 12:02:04.6934||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 12:02:04.6934||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 12:02:05.6152||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 12:02:05.7798||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 12:02:05.8017||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 12:02:05.8473||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 233.0596ms 
+2022-10-25 12:02:17.5200||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/emailaddress/registrations application/json 40 
+2022-10-25 12:02:17.5415||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/emailaddress/registrations application/json 40 - 307 0 - 21.4838ms 
+2022-10-25 12:02:17.5888||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/emailaddress/registrations application/json 40 
+2022-10-25 12:02:17.5888||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/emailaddress/registrations application/json 40 - 404 0 - 1.1011ms 
+2022-10-25 12:02:49.7028||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 40 
+2022-10-25 12:02:49.7028||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 40 - 307 0 - 0.9467ms 
+2022-10-25 12:02:49.7069||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 40 
+2022-10-25 12:02:49.7069||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:02:49.7572||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 12:02:50.1503||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 12:02:50.4225||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-10-25 12:02:51.4683||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-10-25 12:02:51.4831||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 1328.6524ms. 
+2022-10-25 12:02:51.4909||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'EPMServices.Application.Common.Models.ESBMessage'. 
+2022-10-25 12:02:51.5416||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 1781.1185ms 
+2022-10-25 12:02:51.5416||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:02:51.5416||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 40 - 202 93 application/json;+charset=utf-8 1840.9599ms 
+2022-10-25 12:04:46.2183||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 12:04:46.2476||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 12:04:46.2476||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 12:04:46.2476||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 12:04:46.2476||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 12:04:47.0546||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 12:04:47.1793||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 12:04:47.1968||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 12:04:47.2382||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 184.5805ms 
+2022-10-25 12:04:54.5624||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 40 
+2022-10-25 12:04:54.5843||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 40 - 307 0 - 21.9531ms 
+2022-10-25 12:04:54.6131||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 40 
+2022-10-25 12:04:54.6131||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:04:54.6566||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 12:04:55.0219||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 12:04:55.1147||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-10-25 12:04:55.5802||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-10-25 12:04:55.5933||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 567.3433ms. 
+2022-10-25 12:04:55.5933||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'EPMServices.Application.Common.Models.ESBMessage'. 
+2022-10-25 12:04:55.6658||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 1006.197ms 
+2022-10-25 12:04:55.6658||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:04:55.6789||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 40 - 202 93 application/json;+charset=utf-8 1065.5795ms 
+2022-10-25 12:05:09.8642||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 12:05:09.8642||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 0.8833ms 
+2022-10-25 12:05:09.8642||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 12:05:09.8642||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:05:09.8642||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 12:05:09.9128||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 12:05:09.9128||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 0.4096ms. 
+2022-10-25 12:05:09.9128||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'EPMServices.Application.Common.Models.ESBMessage'. 
+2022-10-25 12:05:09.9128||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 45.3944ms 
+2022-10-25 12:05:09.9128||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:05:09.9128||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 - 202 93 application/json;+charset=utf-8 46.2456ms 
+2022-10-25 12:05:12.9710||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 12:05:12.9710||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 0.8513ms 
+2022-10-25 12:05:12.9710||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 12:05:12.9710||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:05:12.9710||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 12:05:13.0313||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 12:05:13.0313||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 0.195ms. 
+2022-10-25 12:05:13.0313||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'EPMServices.Application.Common.Models.ESBMessage'. 
+2022-10-25 12:05:13.0313||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 53.775ms 
+2022-10-25 12:05:13.0313||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:05:13.0313||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 - 202 93 application/json;+charset=utf-8 54.7644ms 
+2022-10-25 12:12:37.3517||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 12:12:37.3679||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 12:12:37.3679||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 12:12:37.3679||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 12:12:37.3679||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 12:12:38.2434||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 12:12:38.3786||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 12:12:38.3925||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 12:12:38.4363||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 194.2661ms 
+2022-10-25 12:12:45.6533||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 12:12:45.6816||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 28.2492ms 
+2022-10-25 12:12:45.7020||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 12:12:45.7020||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:12:45.8092||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 12:12:46.4093||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 12:12:46.4997||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-10-25 12:12:47.0247||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-10-25 12:12:47.0247||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 623.8792ms. 
+2022-10-25 12:12:47.0434||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'EPMServices.Application.Common.Models.ESBMessage'. 
+2022-10-25 12:12:47.0928||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 1280.2807ms 
+2022-10-25 12:12:47.0928||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 12:12:47.1046||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 - 202 93 application/json;+charset=utf-8 1402.4359ms 
+2022-10-25 14:13:51.5937||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 14:13:51.6106||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 14:13:51.6106||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 14:13:51.6140||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 14:13:51.6140||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 14:13:52.5362||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 14:13:52.6785||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 14:13:52.6977||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 14:13:52.7297||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 199.1981ms 
+2022-10-25 14:14:02.6414||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 14:14:02.7664||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 125.0455ms 
+2022-10-25 14:14:02.8113||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 14:14:02.8181||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 14:14:02.8551||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 14:14:03.4638||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 14:14:03.6961||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects... 
+2022-10-25 14:14:05.2824||INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed. 
+2022-10-25 14:14:05.2959||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 1828.5628ms. 
+2022-10-25 14:14:05.3024||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'EPMServices.Application.Common.Models.ESBMessage'. 
+2022-10-25 14:14:05.3749||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 2516.611ms 
+2022-10-25 14:14:05.3749||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 14:14:05.3952||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 - 202 93 application/json;+charset=utf-8 2583.7194ms 
+2022-10-25 14:54:27.4858||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 14:54:27.5136||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 14:54:27.5136||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 14:54:27.5136||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 14:54:27.5136||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 14:54:28.6788||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 14:54:28.8471||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 14:54:28.8672||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 14:54:28.9138||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 235.7024ms 
+2022-10-25 14:54:34.5158||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 14:54:34.5470||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 31.2269ms 
+2022-10-25 14:54:34.5791||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 14:54:34.5791||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 14:54:34.6211||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 14:54:34.9780||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 14:58:26.8522||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 14:58:26.8736||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 14:58:26.8762||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 14:58:26.8762||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 14:58:26.8762||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 14:58:28.0675||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 14:58:28.1803||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 14:58:28.2017||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 14:58:28.2433||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 183.2416ms 
+2022-10-25 14:58:34.3853||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 14:58:34.4082||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 22.9963ms 
+2022-10-25 14:58:34.4243||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 14:58:34.4243||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 14:58:34.4797||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 14:58:34.7768||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 14:58:56.0870||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 21598.886ms 
+2022-10-25 14:58:56.0870||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 14:58:56.2008||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 - 400 - application/json 21775.6078ms 
+2022-10-25 15:04:31.9217||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2022-10-25 15:04:31.9511||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2022-10-25 15:04:31.9621||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-10-25 15:04:31.9621||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-10-25 15:04:31.9621||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\dev\EPM-Services\src\Api 
+2022-10-25 15:04:33.3880||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2022-10-25 15:04:33.5965||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2022-10-25 15:04:33.6144||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2022-10-25 15:04:33.6582||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 271.6062ms 
+2022-10-25 15:04:40.4589||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 15:04:40.4872||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5053/api/EmailAddresses/Registrations application/json 36 - 307 0 - 28.3064ms 
+2022-10-25 15:04:40.5151||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 
+2022-10-25 15:04:40.5151||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 15:04:40.5605||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "EmailAddressesRegistrations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EPMServices.Application.Common.Models.ESBMessage]] Post(EPMServices.Application.Common.Models.EmailAddressRegistration.EmailAddressRegistrationRequest) on controller EPMServices.Api.Controllers.EmailAddressesRegistrationsController (Api). 
+2022-10-25 15:04:40.9094||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) - Validation state: Valid 
+2022-10-25 15:06:18.5114||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api) in 97943.6609ms 
+2022-10-25 15:06:18.5114||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'EPMServices.Api.Controllers.EmailAddressesRegistrationsController.Post (Api)' 
+2022-10-25 15:06:18.6204||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7053/api/EmailAddresses/Registrations application/json 36 - 400 - application/json 98101.8723ms 

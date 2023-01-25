@@ -1,0 +1,783 @@
+2023-01-25 07:06:08.2503||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 07:06:08.2656||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 07:06:08.2656||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 07:06:08.2656||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 07:06:08.2656||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 07:06:09.9068||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 07:06:10.1623||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 07:06:10.1960||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:06:10.2507||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 351.1321ms 
+2023-01-25 07:06:17.2525||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:06:17.2587||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:06:17.3405||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:06:17.6768||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:06:24.3385||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 07:06:26.6816||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-01-25 07:06:27.2996||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 9951.7588ms 
+2023-01-25 07:06:27.2996||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:06:27.3090||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksQuery.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksQuery.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooks(String sortBy, Boolean useSp) in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 17
+   at lambda_method397(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-01-25 07:06:27.4227||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 500 - text/plain;+charset=utf-8 10166.7413ms 
+2023-01-25 07:07:44.2632||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:07:44.2632||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:07:44.2632||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:07:44.3740||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:08:08.0168||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-01-25 07:08:08.3574||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 24092.4241ms 
+2023-01-25 07:08:08.3574||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:08:08.3574||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksQuery.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksQuery.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooks(String sortBy, Boolean useSp) in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 17
+   at lambda_method397(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-01-25 07:08:08.3574||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 500 - text/plain;+charset=utf-8 24104.5528ms 
+2023-01-25 07:10:19.9597||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 07:10:19.9954||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 07:10:20.0061||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 07:10:20.0061||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 07:10:20.0061||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 07:10:22.3420||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 07:10:22.6765||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 07:10:22.7467||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:10:22.7809||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 442.4050ms 
+2023-01-25 07:10:27.5620||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:10:27.5620||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:10:27.6443||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:10:28.1465||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:10:36.7158||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 07:10:39.1872||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-01-25 07:10:40.0166||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 12361.491ms 
+2023-01-25 07:10:40.0166||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:10:40.0288||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksQuery.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksQuery.cs:line 30
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooks(String sortBy, Boolean useSp) in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 17
+   at lambda_method397(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-01-25 07:10:40.1188||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 500 - text/plain;+charset=utf-8 12556.5966ms 
+2023-01-25 07:13:44.8675||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 07:13:44.9137||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 07:13:44.9230||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 07:13:44.9230||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 07:13:44.9230||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 07:13:46.6661||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 07:13:46.9328||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 07:13:46.9677||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:13:47.0328||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 365.0589ms 
+2023-01-25 07:13:53.7677||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:13:53.7677||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:13:53.8575||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:13:54.2959||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:14:00.2088||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 07:14:02.9809||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-01-25 07:14:03.6599||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 9790.9824ms 
+2023-01-25 07:14:03.6599||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:14:03.6599||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksQuery.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksQuery.cs:line 26
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooks(String sortBy, Boolean useSp) in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 17
+   at lambda_method397(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-01-25 07:14:03.7378||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 500 - text/plain;+charset=utf-8 9970.0539ms 
+2023-01-25 07:17:03.6712||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 07:17:03.7045||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 07:17:03.7045||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 07:17:03.7045||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 07:17:03.7045||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 07:17:05.8552||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 07:17:06.2924||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 07:17:06.3253||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:17:06.3749||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 519.7798ms 
+2023-01-25 07:17:14.6475||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:17:14.6475||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:17:14.7439||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:17:15.1422||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:17:19.8106||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 07:17:21.8826||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.Double'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Double()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetDouble(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.Double'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Double()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetDouble(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-01-25 07:17:22.4875||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 7738.4043ms 
+2023-01-25 07:17:22.4875||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:17:22.4875||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.Double'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Double()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetDouble(Int32 i)
+   at lambda_method418(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksQuery.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksQuery.cs:line 26
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 32
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooks(String sortBy, Boolean useSp) in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 17
+   at lambda_method397(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-01-25 07:17:22.5997||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 500 - text/plain;+charset=utf-8 7952.2132ms 
+2023-01-25 07:19:54.2959||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 07:19:54.3170||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 07:19:54.3170||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 07:19:54.3170||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 07:19:54.3170||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 07:19:55.8337||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 07:19:56.0649||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 07:19:56.1087||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:19:56.1533||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 325.5262ms 
+2023-01-25 07:20:01.7644||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:20:01.7672||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:20:01.8162||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:20:02.2216||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:20:19.2404||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 07:20:19.3248||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 07:20:33.2298||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Assessment.Api.Controllers.BooksController.GetBooks (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 30994.0802ms. 
+2023-01-25 07:20:33.2298||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 07:20:33.4561||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 31617.0922ms 
+2023-01-25 07:20:33.4561||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:20:33.4561||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:20:33.5011||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 202 612 application/json;+charset=utf-8 31726.1442ms 
+2023-01-25 07:21:07.3487||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 07:21:07.3775||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 07:21:07.3866||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 07:21:07.3866||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 07:21:07.3866||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 07:21:08.8846||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 07:21:09.2700||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 07:21:09.4255||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:21:09.4787||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 594.8553ms 
+2023-01-25 07:21:13.7166||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - 
+2023-01-25 07:21:13.7166||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:21:13.8384||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 07:21:14.3734||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 07:21:19.4116||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 07:21:19.5973||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 07:21:21.9449||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Assessment.Api.Controllers.BooksController.GetBooks (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 7561.6993ms. 
+2023-01-25 07:21:21.9534||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 07:21:22.2489||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 8401.9612ms 
+2023-01-25 07:21:22.2489||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 07:21:22.2489||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 07:21:22.2774||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=false - - - 202 1340 application/json;+charset=utf-8 8558.7596ms 
+2023-01-25 08:20:58.9901||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 08:20:59.0417||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 08:20:59.0469||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 08:20:59.0469||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 08:20:59.0469||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 08:21:01.2329||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 08:21:01.4967||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 08:21:01.5993||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 08:21:01.6885||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 462.4640ms 
+2023-01-25 08:21:14.7622||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - 
+2023-01-25 08:21:14.7647||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:21:14.8173||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 08:21:15.1755||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 08:21:32.8924||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 08:21:33.0789||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 08:21:35.4260||ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1,149ms) [Parameters=[p0='author' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+EXECUTE dbo.GetAllBooks @sortBy 
+2023-01-25 08:21:35.6025||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@sortBy".
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d682383d-4f2d-42d1-af65-1d9f4a55b892
+Error Number:137,State:2,Class:15 Microsoft.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@sortBy".
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d682383d-4f2d-42d1-af65-1d9f4a55b892
+Error Number:137,State:2,Class:15
+2023-01-25 08:21:36.4651||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 21641.3284ms 
+2023-01-25 08:21:36.4701||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:21:36.5001||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Microsoft.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@sortBy".
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksUsingSp.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksUsingSp.cs:line 26
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 35
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooks(String sortBy, Boolean useSp) in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 17
+   at lambda_method397(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:d682383d-4f2d-42d1-af65-1d9f4a55b892
+Error Number:137,State:2,Class:15
+2023-01-25 08:21:36.7181||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - - 500 - text/plain;+charset=utf-8 21955.7263ms 
+2023-01-25 08:24:56.6109||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 08:24:56.6289||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 08:24:56.6289||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 08:24:56.6289||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 08:24:56.6289||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 08:24:58.2420||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 08:24:58.4887||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 08:24:58.5458||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 08:24:58.6340||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 392.4430ms 
+2023-01-25 08:25:06.9237||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - 
+2023-01-25 08:25:06.9237||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:25:06.9925||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 08:25:07.2143||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 08:25:16.3278||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 08:25:16.5089||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 08:25:56.1964||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 08:25:56.2221||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 08:25:56.2221||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 08:25:56.2221||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 08:25:56.2221||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 08:25:57.8364||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 08:25:58.2169||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 08:25:58.3110||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 08:25:58.3558||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 558.5967ms 
+2023-01-25 08:26:27.8557||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - 
+2023-01-25 08:26:27.8557||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:26:27.9078||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 08:26:28.1371||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 08:26:44.5753||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 08:26:44.7134||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 08:26:47.2308||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Assessment.Api.Controllers.BooksController.GetBooks (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 19084.7347ms. 
+2023-01-25 08:26:47.2391||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 08:26:47.6291||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 19708.1978ms 
+2023-01-25 08:26:47.6291||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:26:47.6291||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 08:26:47.6913||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - - 202 1340 application/json;+charset=utf-8 19835.3896ms 
+2023-01-25 08:49:49.6137||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 08:49:49.6912||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 08:49:49.7168||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 08:49:49.7168||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 08:49:49.7168||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 08:49:51.5173||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 08:49:52.1134||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 08:49:52.3428||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 08:49:52.4494||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 932.3383ms 
+2023-01-25 08:49:59.4138||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - 
+2023-01-25 08:49:59.4138||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:49:59.5309||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 08:50:00.0646||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Assessment.Api.Controllers.BooksController.GetBooks (Api) - Validation state: Valid 
+2023-01-25 08:51:20.2297||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 08:51:20.5170||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 08:51:24.2448||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Assessment.Api.Controllers.BooksController.GetBooks (Api), returned result Microsoft.AspNetCore.Mvc.AcceptedResult in 84172.0191ms. 
+2023-01-25 08:51:24.2548||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 08:51:24.5922||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 85054.5071ms 
+2023-01-25 08:51:24.6005||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 08:51:24.6005||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 08:51:24.7431||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - - 202 1340 application/json;+charset=utf-8 85327.4298ms 
+2023-01-25 09:30:56.3813||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 09:30:56.3947||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 09:30:56.3947||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 09:30:56.3988||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 09:30:56.3988||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 09:30:56.9597||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 09:30:57.0393||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 09:30:57.0393||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 09:30:57.0726||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 113.0846ms 
+2023-01-25 09:31:11.5149||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - 
+2023-01-25 09:31:11.5149||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 09:31:11.5442||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 09:31:12.2004||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 09:31:12.2511||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 09:31:15.9551||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 09:31:16.0590||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 4510.5138ms 
+2023-01-25 09:31:16.0590||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 09:31:16.0590||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 09:31:16.0723||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - - 202 1340 application/json;+charset=utf-8 4555.7218ms 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Autr&UseSp=true - - 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 10.7219ms 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 09:31:30.7412||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Autr&UseSp=true - - - 202 1340 application/json;+charset=utf-8 11.7789ms 
+2023-01-25 09:31:47.0823||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-01-25 10:52:27.0340||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 10:52:27.0473||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 10:52:27.0473||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 10:52:27.0473||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 10:52:27.0473||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 10:52:27.3951||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 10:52:27.4598||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 10:52:27.4598||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 10:52:27.4919||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 97.7509ms 
+2023-01-25 10:52:37.1099||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Autr&UseSp=true - - 
+2023-01-25 10:52:37.1099||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 10:52:37.1373||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 10:52:37.6916||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 10:52:37.7398||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 10:52:38.9824||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 10:52:39.0836||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 1941.1451ms 
+2023-01-25 10:52:39.0836||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 10:52:39.0836||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 10:52:39.0992||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Autr&UseSp=true - - - 202 1340 application/json;+charset=utf-8 1988.7041ms 
+2023-01-25 10:52:47.0417||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - 
+2023-01-25 10:52:47.0417||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 10:52:47.0417||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooks(System.String, Boolean) on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 10:52:47.0547||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 10:52:47.0547||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooks (Api) in 12.8556ms 
+2023-01-25 10:52:47.0547||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooks (Api)' 
+2023-01-25 10:52:47.0547||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 10:52:47.0547||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books?SortBy=Author&UseSp=true - - - 202 1340 application/json;+charset=utf-8 14.0574ms 
+2023-01-25 10:52:52.5560||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-01-25 11:34:41.8619||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 11:34:41.8619||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 11:34:41.8619||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 11:34:41.8777||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 11:34:41.8777||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 11:34:42.5400||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 11:34:42.6159||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 11:34:42.6159||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:34:42.6430||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 103.9524ms 
+2023-01-25 11:36:49.8423||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/Sortp - - 
+2023-01-25 11:36:49.8423||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortP (Api)' 
+2023-01-25 11:36:49.8700||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortP", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortP() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:36:50.4354||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 11:36:50.4944||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 11:36:51.2671||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 11:36:51.3731||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortP (Api) in 1500.5147ms 
+2023-01-25 11:36:51.3731||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortP (Api)' 
+2023-01-25 11:36:51.3731||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:36:51.3883||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/Sortp - - - 202 1256 application/json;+charset=utf-8 1545.8646ms 
+2023-01-25 11:36:56.0109||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/Sorta - - 
+2023-01-25 11:36:56.0120||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortA (Api)' 
+2023-01-25 11:36:56.0120||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortA", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortA() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:36:56.0302||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 11:36:56.0302||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortA (Api) in 15.9706ms 
+2023-01-25 11:36:56.0302||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortA (Api)' 
+2023-01-25 11:36:56.0302||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:36:56.0302||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/Sorta - - - 202 1256 application/json;+charset=utf-8 20.3332ms 
+2023-01-25 11:37:28.7615||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/Sorta/usesp - - 
+2023-01-25 11:37:28.7615||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortAUseSp (Api)' 
+2023-01-25 11:37:28.7657||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortAUseSp", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortAUseSp() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:37:28.8563||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 11:37:28.8567||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortAUseSp (Api) in 90.8272ms 
+2023-01-25 11:37:28.8567||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortAUseSp (Api)' 
+2023-01-25 11:37:28.8567||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:37:28.8567||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/Sorta/usesp - - - 202 1256 application/json;+charset=utf-8 95.5460ms 
+2023-01-25 11:37:35.2655||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - 
+2023-01-25 11:37:35.2655||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:37:35.2655||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortPUseSp", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortPUseSp() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:37:35.2885||ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXECUTE dbo.GetAllBooks 
+2023-01-25 11:37:35.3250||ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Assessment.Infrastructure.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Procedure or function 'GetAllBooks' expects parameter '@sortBy', which was not supplied.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:35bb0e5d-eb88-4c07-ae8e-6fb6d6cec949
+Error Number:201,State:4,Class:16 Microsoft.Data.SqlClient.SqlException (0x80131904): Procedure or function 'GetAllBooks' expects parameter '@sortBy', which was not supplied.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:35bb0e5d-eb88-4c07-ae8e-6fb6d6cec949
+Error Number:201,State:4,Class:16
+2023-01-25 11:37:35.3469||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api) in 77.7232ms 
+2023-01-25 11:37:35.3469||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:37:35.3469||ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Microsoft.Data.SqlClient.SqlException (0x80131904): Procedure or function 'GetAllBooks' expects parameter '@sortBy', which was not supplied.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assessment.Application.Queries.GetBooksUsingSp.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Queries\GetBooksUsingSp.cs:line 26
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Application.Book.GetBooks.CommandHandler.Handle(Command request, CancellationToken cancellationToken) in C:\Code\Assessment\src\Application\Book\GetBooks.cs:line 35
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp() in C:\Code\Assessment\src\Api\Controllers\BooksController.cs:line 31
+   at lambda_method504(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:35bb0e5d-eb88-4c07-ae8e-6fb6d6cec949
+Error Number:201,State:4,Class:16
+2023-01-25 11:37:35.3998||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - - 500 - text/plain;+charset=utf-8 134.3201ms 
+2023-01-25 11:38:20.1924||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-01-25 11:40:19.3031||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 11:40:19.3210||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 11:40:19.3210||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 11:40:19.3210||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 11:40:19.3210||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 11:40:19.4962||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 11:40:19.5695||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 11:40:19.5695||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:40:19.6060||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 110.5987ms 
+2023-01-25 11:40:56.7284||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - 
+2023-01-25 11:40:56.7284||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:40:56.7515||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortPUseSp", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortPUseSp() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:40:57.3354||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 11:40:57.3952||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 11:40:58.1897||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 11:40:58.3106||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api) in 1554.969ms 
+2023-01-25 11:40:58.3106||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:40:58.3106||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:40:58.3339||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - - 202 1256 application/json;+charset=utf-8 1605.4584ms 
+2023-01-25 11:41:06.6130||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/price - - 
+2023-01-25 11:41:06.6149||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksPrice (Api)' 
+2023-01-25 11:41:06.6149||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksPrice", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksPrice() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:41:06.7576||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'Assessment.Application.Common.Models.GetBooksPriceResponse'. 
+2023-01-25 11:41:06.7576||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksPrice (Api) in 140.561ms 
+2023-01-25 11:41:06.7576||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksPrice (Api)' 
+2023-01-25 11:41:06.7576||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:41:06.7576||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/price - - - 202 20 application/json;+charset=utf-8 147.1158ms 
+2023-01-25 11:41:17.3281||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - 
+2023-01-25 11:41:17.3281||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:41:17.3281||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortPUseSp", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortPUseSp() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:41:17.4048||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 11:41:17.4048||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api) in 76.6088ms 
+2023-01-25 11:41:17.4048||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:41:17.4048||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:41:17.4048||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - - 202 1256 application/json;+charset=utf-8 77.3818ms 
+2023-01-25 11:56:00.5673||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-01-25 11:56:39.0722||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7053 
+2023-01-25 11:56:39.0916||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5053 
+2023-01-25 11:56:39.0947||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-01-25 11:56:39.0947||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-01-25 11:56:39.0947||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Code\Assessment\src\Api 
+2023-01-25 11:56:39.3085||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7053/ - - 
+2023-01-25 11:56:39.4066||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|No cached response available for this request. 
+2023-01-25 11:56:39.4066||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:56:39.4619||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7053/ - - - 404 0 - 154.5922ms 
+2023-01-25 11:56:44.6322||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - 
+2023-01-25 11:56:44.6418||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:56:44.6618||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBooksSortPUseSp", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Assessment.Application.Common.Models.GetBooksResponse]] GetBooksSortPUseSp() on controller Assessment.Api.Controllers.BooksController (Api). 
+2023-01-25 11:56:45.2628||WARN|Microsoft.EntityFrameworkCore.Model.Validation|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2023-01-25 11:56:45.3149||WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-01-25 11:56:46.0720||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing AcceptedResult, writing value of type 'System.Collections.Generic.List`1[[Assessment.Application.Common.Models.GetBooksResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-01-25 11:56:46.1965||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api) in 1531.8629ms 
+2023-01-25 11:56:46.1965||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Assessment.Api.Controllers.BooksController.GetBooksSortPUseSp (Api)' 
+2023-01-25 11:56:46.1965||INFO|Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware|The response could not be cached for this request. 
+2023-01-25 11:56:46.2157||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7053/api/Books/SortP/usesp - - - 202 1622 application/json;+charset=utf-8 1582.5413ms 
+2023-01-25 12:01:18.3023||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 

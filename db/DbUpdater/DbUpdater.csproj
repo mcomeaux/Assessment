@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="Migrations\000_hql_Utilities.sql" />
+    <None Remove="Migrations\001_Create_Books_Table.sql" />
+    <None Remove="Migrations\002_Create_GetAllBooks_Sp.sql" />
+    <None Remove="PostDeployment\001_Setup_Security_For_Environment.sql" />
+    <None Remove="PostDeployment\002_Populate_Sample_Data.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\000_hql_Utilities.sql" />
+    <EmbeddedResource Include="Migrations\002_Create_GetAllBooks_Sp.sql" />
+    <EmbeddedResource Include="Migrations\001_Create_Books_Table.sql" />
+    <EmbeddedResource Include="PostDeployment\002_Populate_Sample_Data.sql" />
+    <EmbeddedResource Include="PostDeployment\001_Setup_Security_For_Environment.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-sqlserver" Version="4.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
